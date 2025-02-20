@@ -1,0 +1,13 @@
+body {
+    background-color: green !important;
+}
+
+h1 {
+    color: white !important;
+    font-family: fantasy;
+}
+
+p {
+    color: white !important;
+    font-family: 'Courier New', Courier, monospace;
+}
