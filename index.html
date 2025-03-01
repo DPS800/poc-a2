@@ -6,7 +6,7 @@
     <!-- METADATA GOES HERE -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CYOA Game POC</title>
+    <title>Text Adventure Game PoC</title>
     <link href="style.css" rel="stylesheet">
 
     <!-- BOOTSTRAP 5 -->
@@ -29,14 +29,16 @@
         <div class="row">
             <div class="col-12 py-5">
 
-                <h1>GPT's Choose Your Own Adventure Game 🧙‍♂️</h1>
-                <p>Welcome to ChatGPT's CYOA Game! You will be offered 4 choices, and you would to select and copy/drag that full choice with what it does in your message to select it. If GPT decides to restart or move back just repeat your message until it properly continues the story. Type 'end' to end your story.</p>
-                <input type="text" placeholder="Type 'start' to begin the game! You can also add a random location to start in!" class="form-control" id="query" />
+                <!--<h1>GPT's Random Choose Your Own Adventure Game 🧙‍♂️</h1>-->
+                <!--<p>Welcome to ChatGPT's CYOA game! You will be offered 4 choices, and you would to select and copy/drag that full choice with what it does in your message to select it. If GPT decides to restart or move back just repeat your message until it properly continues the story. Type 'end' at any time in the story to end it there.</p>-->
+                <h1>GPT's Random Text-Based Adventure Game 🧙‍♂️</h1>
+                <p>Welcome to ChatGPT's text-based adventure game! After reading the bot's outcome scenario you will be asked type your next action. If GPT decides to restart or move back just repeat your message until it properly continues the story. Type 'end' at any time in the story to end it there.</p>
+                <input type="text" placeholder="Type 'start' to begin the game! You can also add a random location to start in! (i. e. 'start in space')" class="form-control" id="query" />
 
                 <button class="btn btn-outline-info w-100 d-block mt-3 mb-0" id="speak">
                     Speak
                 </button>
-                <button class="btn btn-primary w-100 d-block mt-2 mb-4" id="submit">
+                <button class="btn btn-success w-100 d-block mt-2 mb-4" id="submit">
                     Submit
                 </button>
 
