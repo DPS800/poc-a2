@@ -111,29 +111,39 @@ function setup() {
     img = loadImage('old_paper.png');
     createCanvas(500,350);
 
-    var options = createDiv().style('display: flex; transform: translate(0,-800%); padding-left: 10%')
-    var optionsTitles = createDiv().parent(options)
-    createP('Pen Colour:').parent(optionsTitles)
-    createP('Pen Size:').parent(optionsTitles)
+    var options = createDiv().style('display: flex; transform: translate(0,520%); padding-left: 10%');
+    var optionsTitles = createDiv().parent(options);
+    createP('Pen Colour:').parent(optionsTitles);
+    createP('Pen Size:').parent(optionsTitles);
 
-    var optionsValues = createDiv().parent(options).style('margin: 5px; width: 40px')
-    penColour = createColorPicker('#000000').parent(optionsValues)
-    penSize = createSelect(false).parent(optionsValues).style('margin: 5px')
-    penSize.option('1')
-    penSize.option('2')
-    penSize.option('3')
-    penSize.option('4')
-    penSize.selected('2')
+    var optionsValues = createDiv().parent(options).style('margin: 5px; width: 40px');
+    penColour = createColorPicker('#000000').parent(optionsValues);
+    penSize = createSelect(false).parent(optionsValues).style('margin: 5px');
+    penSize.option('1');
+    penSize.option('2');
+    penSize.option('3');
+    penSize.option('4');
+    penSize.option('5');
+    penSize.option('10');
+    penSize.option('20');
+    penSize.option('40');
+    penSize.selected('2');
+
+    clear = createButton('CLEAR').parent(options).style('margin: 10px; width: 100px; height: 50px;')
 }
 
 function draw() {
     background(img);
 
-    if (mouseIsPressed) {
+    clear.mousePressed(function() {
+        lines = [];
+    })
+
+    if (mouseIsPressed && mouseX <= width && mouseX >= 0 && mouseY <= height && mouseY >= 0) {
         var line = new MyLine(penColour.value(),penSize.value())
-        lines.push(line)
+        lines.push(line);
     }
     for (var line of lines) {
-        line.show()
+        line.show();
     }
 }

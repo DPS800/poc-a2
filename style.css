@@ -28,3 +28,15 @@ main {
     margin-top: 20px;
     margin-bottom: 100px;
 }
+
+.border {
+    background-color: rgb(3, 37, 13) !important;
+    color: wheat !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+.form-control {
+    background-color: rgb(3, 37, 13) !important;
+    color: white !important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}

@@ -1,9 +1,9 @@
 class MyLine {
     constructor(penColour, penSize) {
-        this.px = pwinMouseX
-        this.py = pwinMouseY
-        this.x = winMouseX
-        this.y = winMouseY
+        this.px = pwinMouseX-117
+        this.py = pwinMouseY-150
+        this.x = winMouseX-117
+        this.y = winMouseY-150
 
         this.penColour = penColour
         this.penSize = penSize
