@@ -31,7 +31,7 @@ main {
 
 .border {
     background-color: rgb(3, 37, 13) !important;
-    color: wheat !important;
+    color: white !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
 
@@ -39,4 +39,8 @@ main {
     background-color: rgb(3, 37, 13) !important;
     color: white !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+.form-control::placeholder {
+    color: rgb(156, 180, 154) !important;
 }
