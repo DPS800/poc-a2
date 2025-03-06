@@ -1,8 +1,7 @@
 $(document).on("click", "#speak", init);
 
+// Text-Based Adventure ChatBot Code
 function init() {
-
-    // TODO: RECOGNIZE SPEECH
 
     $("#speak").prop("disabled", true);
     $("#speak").text("Speaking ...");
@@ -100,6 +99,41 @@ function send() {
 
         });
 
+    }
+}
 
+// Adventurer's Scrapbook Code
+let bg;
+var lines = []
+var penColour
+var penSize
+function setup() {
+    img = loadImage('old_paper.png');
+    createCanvas(500,350);
+
+    var options = createDiv().style('display: flex; transform: translate(0,-800%); padding-left: 10%')
+    var optionsTitles = createDiv().parent(options)
+    createP('Pen Colour:').parent(optionsTitles)
+    createP('Pen Size:').parent(optionsTitles)
+
+    var optionsValues = createDiv().parent(options).style('margin: 5px; width: 40px')
+    penColour = createColorPicker('#000000').parent(optionsValues)
+    penSize = createSelect(false).parent(optionsValues).style('margin: 5px')
+    penSize.option('1')
+    penSize.option('2')
+    penSize.option('3')
+    penSize.option('4')
+    penSize.selected('2')
+}
+
+function draw() {
+    background(img);
+
+    if (mouseIsPressed) {
+        var line = new MyLine(penColour.value(),penSize.value())
+        lines.push(line)
+    }
+    for (var line of lines) {
+        line.show()
     }
 }

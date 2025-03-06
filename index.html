@@ -21,6 +21,10 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
+    <!-- P5.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+    <script src="myLine.js"></script>
+
 </head>
 
 <body>
@@ -29,11 +33,29 @@
         <div class="row">
             <div class="col-12 py-5">
 
+                <h2>Adventurer's Scrapbook</h2>
+                <h4>Draw any notes during your adventure on your handy scrapbook!</h4>
+                <main></main>
                 <!--<h1>GPT's Random Choose Your Own Adventure Game 🧙‍♂️</h1>-->
                 <!--<p>Welcome to ChatGPT's CYOA game! You will be offered 4 choices, and you would to select and copy/drag that full choice with what it does in your message to select it. If GPT decides to restart or move back just repeat your message until it properly continues the story. Type 'end' at any time in the story to end it there.</p>-->
                 <h1>GPT's Random Text-Based Adventure Game 🧙‍♂️</h1>
-                <p>Welcome to ChatGPT's text-based adventure game! After reading the bot's outcome scenario you will be asked type your next action. If GPT decides to restart or move back just repeat your message until it properly continues the story. Type 'end' at any time in the story to end it there.</p>
-                <input type="text" placeholder="Type 'start' to begin the game! You can also add a random location to start in! (i. e. 'start in space')" class="form-control" id="query" />
+                <p>Welcome to ChatGPT's text-based adventure game! After reading the bot's outcome scenario you will be
+                    asked type your next action. <b>If GPT decides to restart or move back just repeat your message
+                        until it properly continues the story.</b> Type 'end' at any time in the story to end it there.
+                    <br><br>I followed a bit from this <a
+                        href="https://www.reddit.com/r/ChatGPT/comments/13xaumz/created_a_chooseyourown_adventure_game_free_form/"
+                        target="_blank">text tutorial post</a> in order to properly learn how to type my prompt to make
+                    a small, randomized text-based adventure game.
+                    Theres also a prompt and description commented out in the code for a version where the bot gives you
+                    4 choices too. The rationale behind choosing this tutorial is that I wanted to see how well chatbots
+                    could play text-based adventure games (with the results of it even remembering a lot of what happens
+                    in the story surprising me) and the tutorial itself being broad and easily editable. This
+                    proof-of-concept shows how chatbots could potentially be used to generate outcomes in a story from
+                    user decisions on the fly.
+                </p>
+                <input type="text"
+                    placeholder="Type 'start' to begin the game! You can also add a random location to start in! (i. e. 'start in space')"
+                    class="form-control" id="query" />
 
                 <button class="btn btn-outline-info w-100 d-block mt-3 mb-0" id="speak">
                     Speak
